@@ -1,16 +1,23 @@
 :root{
-    ---colorBody: rgb(108, 45, 45);
-    ---colorHeader: color: rgba(86, 151, 140, 1);
-    ---colorPresentacion: #1abc2d;
-    ---colorIngresoGastos: #544cbf;
-    ---colorProcesoGatos: #bb7428;
-    ---colorGastoPracialesComprador: #123512;
-    ---colorGastosTotalesComprador: #413115;
-    ---colorListaHorizontal: #324134;
-    ---colorGastoTotalJuntada: #453252;
-    ---colorDevolucionGasto: #943c8e;
-    ---colorFotter: #55b032;
-    ---colorDarkModeFondo: #000;
+    ---Body: rgb(108, 45, 45);
+    ---Header: color: rgba(86, 151, 140, 1);
+    ---Presentacion: #1abc2d;
+    ---IngresoGastos: #544cbf;
+    ---ProcesoGatos: #bb7428;
+    ---GastoPracialesComprador: #123512;
+    ---GastosTotalesComprador: #413115;
+    ---ListaHorizontal: #324134;
+    ---GastoTotalJuntada: #453252;
+    ---DevolucionGasto: #943c8e;
+    ---Fotter: #55b032;
+    ---DarkModeFondo: #000;
+
+    ---BtnReposo: #717171;
+    ---BtnHover: #c39d9d;
+    ---BtnPresionado: #121212;
+
+    ---Sombra: #04176f;
+
     
     
 
@@ -56,7 +63,7 @@ p{
 }
 
 body{
-    background-color: var(---colorBody);
+    background-color: var(---Body);
 }
 
 main {
@@ -67,7 +74,7 @@ main {
 /* Header */
 
 header {
-    background-color: var(---colorHeader);
+    background-color: var(---Header);
     text-align: center;
     height: 8rem;
     display: flex;
@@ -82,7 +89,9 @@ header {
 /* PRESENTACIÓN */
 
 .presentacion{ 
-background-color: var(---colorPresentacion);
+background-color: var(---Presentacion);
+box-shadow: 0px 4px 5px var(---Sombra);
+z-index: 1;
 }
 
 button{
@@ -91,6 +100,14 @@ button{
     width: 100%;
     height: 50%;
 align-items: center;
+}
+
+#btnAgregrarGasto{
+    margin-top: 30px;
+    height: 20px;
+    background-color: var(---BtnReposo);
+    
+
 
 }
 
@@ -122,7 +139,7 @@ align-items: center;
 } */
 
 .inputs {
-    background-color:var(---colorIngresoGastos);
+    background-color:var(---IngresoGastos);
     /* display: flex;
     flex-wrap: wrap;
 
@@ -137,26 +154,19 @@ form{
     min-width: 5em;
 } */
 
-.form-input{
+/* .form-input{
     height: 20px;
-background-color: aquamarine;
-
-}
-form{
-
-}
+background-color: aquamarine; } */
 
 
-form input[type="text"]{
-    background-color: rgb(148, 148, 148);
+form input[type="text"], #btnAgregrarGasto{
+    background-color: var(---BtnReposo);
     height: 20px;
     cursor: pointer;
     width: 80%;
     border-style: none;
     text-align: center;
-    border-radius: 5px;
 
-    
 }
 
 
@@ -166,11 +176,11 @@ form input[type="text"]::placeholder{
 
 }
 
-form input[type="text"]:hover{
+form input[type="text"]:hover {
 
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
     text-align: center;
-    background-color: bisque;
+    background-color:var(---BtnHover);
         }
     
 
@@ -179,10 +189,13 @@ form input[type="text"]:focus{
 outline: none;
 box-shadow: 0 0 10px rgba(10, 23, 164, 0.259);
 text-align: center;
-background-color: bisque;
+background-color: var(---BtnHover);
 
     }
 
+#btnAgregrarGasto:active{
+    background-color: var(---BtnHover);
+}
 /* form input[type="text"]{
     background-color: red;
     height: 30px;
@@ -220,7 +233,7 @@ text-align: center;
 /* GASTOS PARCIALES Y TOTALES DE COMPRADORES */
 
 .procesoDeGastos {
-    background-color: var(---colorProcesoGatos);
+    background-color: var(---ProcesoGatos);
 
     display: flex;
 }
@@ -228,7 +241,7 @@ text-align: center;
 /* GASTOS PARCIALES DE COMPRADORES */
 
 .estadoGastosParciales {
-    background-color: var(---colorGastoPracialesComprador);
+    background-color: var(---GastoPracialesComprador);
     width: 50%;
 }
 
@@ -244,7 +257,7 @@ b{
 } */
 
 .listadoHorizotalGastosParciales{
-    background-color:var(---colorListaHorizontal);
+    background-color:var(---ListaHorizontal);
     display: flex;
     justify-content: space-between;
     width: 90%;
@@ -261,7 +274,7 @@ b{
 /* GASTOS TOTALES DE COMPRADORES */
 
 .gastosTotalesComprador {
-    background-color:var(---colorGastosTotalesComprador);
+    background-color:var(---GastosTotalesComprador);
     flex: 1;
 }
 
@@ -289,7 +302,7 @@ b{
 /* DEVOLUCIONES DE GASTOS A COMPRADORES */
 
 .devolucionGastos {
-    background-color: var(---colorDevolucionGasto);
+    background-color: var(---DevolucionGasto);
     height: 150px;
 }
 
@@ -297,7 +310,7 @@ b{
 /* Footer */
 
 footer {
-    background-color: var(---colorFotter);
+    background-color: var(---Fotter);
     display: flex;
     height: 8rem;
 }
@@ -325,53 +338,53 @@ a {
 }
 
 a:hover {
-    background-color: var(---colorDarkModeFondo);
+    background-color: var(---DarkModeFondo);
 }
 
 /* MODO OSCURO */
 
 .darkmode {
-    background-color: var(---colorDarkModeFondo);;
+    background-color: var(---DarkModeFondo);;
 }
 
 .darkmode header {
-    background-color: var(---colorDarkModeFondo);;
+    background-color: var(---DarkModeFondo);;
 }
 
 .darkmode .estadoGastosParciales{
-    background-color: var(---colorDarkModeFondo);;
+    background-color: var(---DarkModeFondo);;
 }
 
 .darkmode .columnaTotales{
-    background-color: var(---colorDarkModeFondo);;
+    background-color: var(---DarkModeFondo);;
 }
 
 .darkmode .gastosTotalesJuntada{
-    background-color: var(---colorDarkModeFondo);;
+    background-color: var(---DarkModeFondo);;
 }
 
 .darkmode .cantidadPersonas{
-    background-color: var(---colorDarkModeFondo);;
+    background-color: var(---DarkModeFondo);;
 }
 
 .darkmode .gastosTotalesComprador{
-    background-color: var(---colorDarkModeFondo);;
+    background-color: var(---DarkModeFondo);;
 }
 
 .darkmode .estadoGastosParciales{
-    background-color: var(---colorDarkModeFondo);;
+    background-color: var(---DarkModeFondo);;
 }
 
 .darkmode footer {
-    background-color: var(---colorDarkModeFondo);;
+    background-color: var(---DarkModeFondo);;
 }
 
 .darkmode .inputs{
-    background-color: var(---colorDarkModeFondo);;
+    background-color: var(---DarkModeFondo);;
 }
 
 .darkmode .devolucionGastos{
-    background-color: var(---colorDarkModeFondo);;
+    background-color: var(---DarkModeFondo);;
 }
 
 .darkmode

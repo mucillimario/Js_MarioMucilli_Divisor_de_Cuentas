@@ -30,11 +30,6 @@
     "id": "idEmpanadas"
   },
   {
-    "titulo": "Ensaladas",
-    "imagen": "img/ensaladas.jpg",
-    "id": "idEnsaladas"
-  },
-  {
     "titulo": "Gaseosas",
     "imagen": "img/gaseosas.jpg",
     "id": "idGaseosas"
@@ -68,5 +63,10 @@
       "titulo": "Verduras",
       "imagen": "img/verduras.jpg",
       "id": "idverduras"
-      }
+      },
+      {
+        "titulo": "Otro",
+        "imagen": "img/otro.jpg",
+        "id": "idvotro"
+        }
     ]
