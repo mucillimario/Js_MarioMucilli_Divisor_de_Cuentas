@@ -135,7 +135,7 @@ function CompradorJuntada(nombre, que, cuanto) {
 
         const nuevoGastoListadoParcial = document.createElement(`li`)
         let divContenedor = document.createElement(`div`)
-        divContenedor.innerHTML = `<h6><b>${this.nombreComprador}</b> ingresó un gasto parcial de <b>${formatoMoneda(this.cuantoCompra)}</b> en <b>${this.queCompra}</b></h6>
+        divContenedor.innerHTML = `<p><b>${this.nombreComprador}</b> ingresó un gasto parcial de <b>${formatoMoneda(this.cuantoCompra)}</b> en <b>${this.queCompra}</b></p>
         `
         divContenedor.className = `listadoHorizotalGastosParciales`
 
@@ -156,7 +156,7 @@ function QuienGastoJuntada(nombre, sumaTotalPorComprador) {
     this.mostrarCompraTotalComprador = function () {
 
         const totalGastoCompradorListado = document.createElement(`li`)
-        totalGastoCompradorListado.innerText = `<h6><b>${this.nombreComprador}</b> gastó en total <b>${formatoMoneda(this.sumaTotalPorComprador)}</b></h6>`
+        totalGastoCompradorListado.innerText = `${this.nombreComprador} gastó en total ${formatoMoneda(this.sumaTotalPorComprador)}`
         document.getElementById(`listadoGastosTotalesComprador`).appendChild(totalGastoCompradorListado)
     };
 }
@@ -208,7 +208,7 @@ BtnCantidadDePersonas.addEventListener("click", function () {
     //////////////////////----//////////////////////// se le sumo el innerHTML = "";
     pGastoTotal.innerHTML = "";
     //////////////////////----//////////////////////
-    pGastoTotal.innerHTML = (`<h6>» El total de las compras fueron <b>${formatoMoneda(gastoTotal)}<b/>.<br>» Ingresaste que las compras se dividen en <b>${cantidadDePersonas}</b> integrantes .<br>» Se deben devolver <b>$${gastoPromedioPersona.toFixed(2)}</b> por persona.</h6>`)
+    pGastoTotal.innerHTML = (`El total de las compras fueron ${formatoMoneda(gastoTotal)}.<br>Ingresaste que las compras se dividen en ${cantidadDePersonas} integrantes .<br>Se deben devolver $${gastoPromedioPersona.toFixed(2)} por persona.`)
 
     // comienza a calcular devoluciones por cada comprador
 
@@ -228,11 +228,11 @@ BtnCantidadDePersonas.addEventListener("click", function () {
         const liDevolucionPorComprador = document.createElement(`li`)
 
         if (montoDevolver > 0) {
-            liDevolucionPorComprador.innerHTML = (`<h6><b>» ${compradorActual.nombreComprador} debe recuperar ${formatoMoneda(montoDevolver)}</b></h6>`)
+            liDevolucionPorComprador.innerHTML = (`» ${compradorActual.nombreComprador} debe recuperar ${formatoMoneda(montoDevolver)}`)
         } else if (montoDevolver < 0) {
-            liDevolucionPorComprador.innerHTML = (`<h6><b>» ${compradorActual.nombreComprador} tiene que poner ${formatoMoneda(Math.abs(montoDevolver))}</b</h6>`)
+            liDevolucionPorComprador.innerHTML = (`» ${compradorActual.nombreComprador} tiene que poner ${formatoMoneda(Math.abs(montoDevolver))}`)
         } else {
-            liDevolucionPorComprador.innerHTML = (`<h6><b>» ${compradorActual.nombreComprador} no hace falta ningún movimiento, salio hecho</b</h6>`)
+            liDevolucionPorComprador.innerHTML = (`» ${compradorActual.nombreComprador} no tienes que devolver ni poner dinero, salio hecho`)
         }
 
         olDevolucionPorComprador.appendChild(liDevolucionPorComprador)
