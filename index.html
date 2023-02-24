@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Seo -->
+    <meta name="keywords"
+        content="Divisor de gastos, amigos, hagamos numeros, cuentas, cuentas claras, app para gastos">
+    <meta name="description" content="Un divisor de gastos para las juntadas con tusqueridos">
+    <!-- Font Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;500;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="bootstrap-5.2.2-dist/css/bootstrap.min.css" />
+    <!-- Wow animacion -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Css -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Titulo -->
+    <title>Mario Mucilli - Js #48575 - Divisor de gastos</title>
+</head>
+
+<body id="IdBody">
+    <main>
+        <header>
+            <div class="headerText">
+                <h3>Mario Mucilli - Js #48575</h3>
+                <h1>Divisor de gastos</h1>
+                <h3> 20/02/2023 Entrega Final 20/02/2023 </h3>
+
+
+        </header>
+        <section class="datos">
+            <button id="IdBotonModoOscuro">Modo Oscuro</button>
+            <div class="ingresoGastos">
+
+                <div class="inputs">
+                    <!-- Segundo formulario: el que pregunta Quien / Que / Cuanto -->
+                    <form action="" class="formCargaGastos">
+                        <h2 class="tituloInputs">Ingreso de gastos</h2>
+
+                        <label class="form-label" for="idQuienGasto">
+                            <p>Quien gasto?</p>
+                        </label>
+                        <input class="form-input" type="text" id="idQuienGasto" size="20" placeholder="Ingrese letras">
+
+                        <label class="form-label" for="idQueGasto">
+                            <p>En que gasto?</p>
+                        </label>
+<div class="botonera">
+                        <div id="almacen" class="">
+                            <select name="Hola" id="hola01" size="15">
+                                <option disabled selected>Seleccionar una opcion</option>
+                            </select>
+                        </div>
+                    </div>
+                        <input class="form-input inputAlto" type="text" id="idQueGasto" size="20"
+                            placeholder="Ingrese letras">
+
+
+                        <label class="form-label" for="idCuantoGasto">
+                            <p>Cuanto gasto?</p>
+                        </label>
+                        <input class="form-input" type="text" id="idCuantoGasto" size="20"
+                            placeholder="Ingrese números">
+
+                        <input type="button" class="estilosbotones" id=btnAgregrarGasto
+                            value="Quiero agregar este gastos parcial">
+                    </form>
+                </div>
+
+            </div>
+
+
+            <div class="procesoDeGastos">
+                <div class="estadoGastosParciales">
+                    <h2>Gastos Ingresados</h2>
+                    <ol id="listadoGastosParciales">
+                    </ol>
+                    <!-- Aca entran los li que se generean con ingresos del DOM -->
+
+                    <input type="button" id="btnCalcularTotales" value="Calcular Totales :) ">
+                    <input type="button" id="btnBorrarTODO" value="Borrar todo" >
+                </div>
+
+
+                <div class="columnaTotales">
+                    <div class="gastosTotalesComprador">
+                        <h2>Gastos por comprador</h2>
+                        <ol id="listadoGastosTotalesComprador">
+                            <!-- Aca entran los li que se generean con ingresos del DOM -->
+
+
+
+                        </ol>
+                    </div>
+                    <div class="gastosTotalesJuntada">
+                        <div class="cantidadPersonas">
+                            <form action="" class="formCargaCantidadPersonas">
+                                <label class="form-label" for="idCantidadDePersonas">
+                                    <p>Cantidad de personas a dividir gastos?</p>
+                                </label>
+                                <input class="form-input" type="text" id="idCantidadDePersonas" required
+                                    placeholder="Ingrese números">
+                                <input type="button" id="btnCargarCantidadDePersonas" value="Agregar">
+
+                            </form>
+
+                        </div>
+                        <h2>Total gastado para esta hermosa juntada</h2>
+                        <p id="idGastoTotal"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="devolucionGastos">
+                <h2>Devolución a cada comprador </h2>
+                <ol id="idDevolucion">
+                </ol>
+            </div>
+
+
+        </section>
+        <footer>
+            <div class="footerText">
+                <p>- Diseñador Gráfico - Diseñador Ux/Ui - Estudiante de la Carrera de Desarrollo de Aplicaciones -</p>
+
+                <h3 class="boton"><a
+                        href="https://www.figma.com/file/nhWo4TaSFem6iwWEe8g1iw/JS-DivisordeGastos-MarioMucilli?node-id=0%3A1&t=gyi8JRGuKWY45maJ-1">Figma
+                        del Dom</a></h3>
+            </div>
+
+        </footer>
+
+    </main>
+    <script src="https://kit.fontawesome.com/7394c787a3.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/marioMucilli-Js-48575.js"></script>
+    <script src="js/modoOscuro.js"></script>
+    <script src="js/peticionAlmacen.js"></script>
+</html>

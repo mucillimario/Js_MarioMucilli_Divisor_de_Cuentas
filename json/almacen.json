@@ -1,0 +1,72 @@
+[
+  {
+    "titulo": "Agua",
+    "imagen": "img/Picture (10).jpg",
+    "id": "idAgua"
+  },
+  {
+    "titulo": "Bebidas con alcohol",
+    "imagen": "img/bebidas-mezcladas.jpg",
+    "id": "idBebidasAlcoholicasMezcladas"
+  },
+  {
+    "titulo": "Bebidas sin alcohol",
+    "imagen": "img/bebidas-sin-alcohol.jpg",
+    "id": "idBebidasSinAlcohol"
+  },
+  {
+    "titulo": "Carne",
+    "imagen": "img/carne.jpg",
+    "id": "idCarne"
+  },
+  {
+    "titulo": "Dulces y caramelos",
+    "imagen": "img/dulces-caramelos.jpg",
+    "id": "idDulcesYCaramelos"
+  },
+  {
+    "titulo": "Empanadas",
+    "imagen": "img/empanadas.jpg",
+    "id": "idEmpanadas"
+  },
+  {
+    "titulo": "Ensaladas",
+    "imagen": "img/ensaladas.jpg",
+    "id": "idEnsaladas"
+  },
+  {
+    "titulo": "Gaseosas",
+    "imagen": "img/gaseosas.jpg",
+    "id": "idGaseosas"
+  },
+  {
+    "titulo": "Helado",
+    "imagen": "img/helado.jpg",
+    "id": "idHelado"
+  },
+  {
+    "titulo": "Hielo",
+    "imagen": "img/hielo.jpg",
+    "id": "idHielo"
+  },
+  {
+    "titulo": "Pasteles y tortas",
+    "imagen": "img/pasteles-tortas.jpg",
+    "id": "idPastelesYTortas"
+  },
+  {
+    "titulo": "Pizza",
+    "imagen": "img/pizza.jpg",
+    "id": "idPizza"
+    },
+    {
+    "titulo": "Sándwiches",
+    "imagen": "img/sandwiches.jpg",
+    "id": "idSandwiches"
+    },
+    {
+      "titulo": "Verduras",
+      "imagen": "img/verduras.jpg",
+      "id": "idverduras"
+      }
+    ]
