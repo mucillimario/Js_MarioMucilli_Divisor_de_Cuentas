@@ -1,6 +1,6 @@
 :root{
     ---colorBody: rgb(108, 45, 45);
-    ---colorHeader: #49a599;
+    ---colorHeader: color: rgba(86, 151, 140, 1);
     ---colorPresentacion: #1abc2d;
     ---colorIngresoGastos: #544cbf;
     ---colorProcesoGatos: #bb7428;
@@ -15,6 +15,16 @@
     
 
 }
+
+/* Color Theme Swatches in RGBA */
+.Ice-cream-parlour-1-rgba { color: rgba(240, 195, 100, 1); }
+.Ice-cream-parlour-2-rgba { color: rgba(189, 172, 136, 1); }
+.Ice-cream-parlour-3-rgba { color: rgba(138, 124, 113, 1); }
+.Ice-cream-parlour-4-rgba { color: rgba(86, 151, 140, 1); }
+.Ice-cream-parlour-5-rgba { color: rgba(136, 189, 165, 1); }
+
+
+
 
 /* 1 rem = 10 px */
 html {
@@ -85,6 +95,24 @@ align-items: center;
 }
 
 /* INPUTS DE GASTOS  */
+.flexo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+
+
+
+
+}
+
+.iconoChico{
+    font-size: 50px;
+    color: darkmagenta;
+    background-color: aqua;
+    padding: 5px;
+}
 /* .ingresoGastos {
     border: 4px solid rgb(91, 16, 166);
     display: flex;
@@ -92,22 +120,61 @@ align-items: center;
 
 .inputs {
     background-color:var(---colorIngresoGastos);
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
 
-    width: 100%;
+    width: 100%; */
 
 }
 
-.inputs input {
+form{
+    display: flex;
+}
+/* .inputs input {
     min-width: 5em;
-}
+} */
 
 .form-input{
     height: 20px;
 background-color: aquamarine;
 
 }
+form{
+
+}
+
+
+form input[type="text"]{
+    background-color: rgb(148, 148, 148);
+    height: 20px;
+    cursor: pointer;
+    width: 80%;
+    border-radius: 5px;
+    border-style: none;
+ 
+    
+}
+
+
+form input[type="text"]::placeholder{
+    text-align: center;
+    color: #000;
+
+
+}
+
+form input[type="text"]:focus{
+outline: none;
+box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+
+    }
+
+/* form input[type="text"]{
+    background-color: red;
+    height: 30px;
+} */
+
+
 
 /* .botonera{
     background-color: rgb(145, 180, 146);
