@@ -1,19 +1,17 @@
 :root{
-    ---colorHeader: #d87000;
+    ---colorHeader: #d80000;
 
 }
 
 /* 1 rem = 10 px */
-/* html {
+html {
     font-size: 62.5%;
-} */
-
-
+}
 
 /* GLOBALES */
 
 /* Reseteo de espacios a los lados y hacia adentro de las cajas*/
-* {
+*{
     margin: 0;
     padding: 0;
 }
@@ -43,7 +41,6 @@ main {
     flex-direction: column;
 }
 
-
 /* Header */
 
 header {
@@ -59,7 +56,20 @@ header {
     align-self: center;
     width: 100%;
 }
+/* PRESENTACIÓN */
 
+.presentacion{ 
+border: 3PX red SOLID;
+}
+
+button{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 50%;
+align-items: center;
+
+}
 
 /* INPUTS DE GASTOS  */
 .ingresoGastos {
@@ -280,3 +290,4 @@ p{
     font-family: 'Barlow', sans-serif;
     color: aliceblue;
 }
+

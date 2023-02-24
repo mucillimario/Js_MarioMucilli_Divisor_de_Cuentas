@@ -23,7 +23,7 @@ const BtnCantidadDePersonas = document.getElementById(`btnCargarCantidadDePerson
 
 // cargar el json para el swal
 
-fetch("almacen.json")
+fetch("json/almacen.json")
     .then(response => response.json())
     .then((data) => {
         almacen = data
@@ -46,6 +46,10 @@ BtnCalcularTotales.addEventListener("click", function () {
     })
     //////////////////////----////////////////////// se sumo     document.getElementById(`listadoGastosTotalesComprador`).innerHTML = "";
     document.getElementById(`listadoGastosTotalesComprador`).innerHTML = "";
+    document.getElementById(`idGastoTotal`).innerHTML = "";
+    document.getElementById(`idDevolucion`).innerHTML = ""
+
+
     //////////////////////----//////////////////////
     for (indice in quienesCompraronOrdenado) {
         quienesCompraronOrdenado[indice].mostrarCompraTotalComprador()
@@ -115,13 +119,10 @@ BtnAgregarGasto.addEventListener("click", function () {
             width: 220,
             height: 100,
             position: 'bottom-end',
+            target: document.getElementById('form-modal'),
         })
     }
 })
-
-
-
-
 
 // // Función que contiene un objeto comprador.
 function CompradorJuntada(nombre, que, cuanto) {
