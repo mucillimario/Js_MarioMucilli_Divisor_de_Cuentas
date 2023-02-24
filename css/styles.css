@@ -99,6 +99,8 @@ align-items: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+    row-gap: 10px;
+    margin: 0px;
 
 
 
@@ -112,6 +114,7 @@ align-items: center;
     color: darkmagenta;
     background-color: aqua;
     padding: 5px;
+    height: 54px;
 }
 /* .ingresoGastos {
     border: 4px solid rgb(91, 16, 166);
@@ -149,23 +152,34 @@ form input[type="text"]{
     height: 20px;
     cursor: pointer;
     width: 80%;
-    border-radius: 5px;
     border-style: none;
- 
+    text-align: center;
+    border-radius: 5px;
+
     
 }
 
 
 form input[type="text"]::placeholder{
-    text-align: center;
     color: #000;
-
+    outline: none;
 
 }
 
+form input[type="text"]:hover{
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    background-color: bisque;
+        }
+    
+
+
 form input[type="text"]:focus{
 outline: none;
-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+box-shadow: 0 0 10px rgba(10, 23, 164, 0.259);
+text-align: center;
+background-color: bisque;
 
     }
 
@@ -196,7 +210,13 @@ box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     margin: 5px;
 } */
 
-
+#almacen{
+    width: 100%;
+text-align: center;
+}
+#hola01{
+    width: 80%;
+}
 /* GASTOS PARCIALES Y TOTALES DE COMPRADORES */
 
 .procesoDeGastos {
