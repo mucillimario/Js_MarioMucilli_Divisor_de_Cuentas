@@ -69,15 +69,21 @@ BtnAgregarGasto.addEventListener("click", function () {
 
     if (!quienCompra) {
         alert(`Ups, te olvidaste cargar el campo de "Quién gastó", 
-        Recordá que es necesario que los 3 campos estén completos :)`)
+        Recordá que es necesario que los 3 campos estén completos :)
+        » Quien gastó y en que gastó se deben ingresar Letras y/o números
+        » Cuanto gastó solo se puede ingresar números`)
     }
     if (!queGasto) {
-        alert(`Ups, te olvidaste cargar el campo de "En que gastó", 
-        Recordá que es necesario que los 3 campos estén completos :)`)       
+        alert(`Ups, te olvidaste cargar el campo de "Quién gastó", 
+        Recordá que es necesario que los 3 campos estén completos :)
+        » Quien gastó y en que gastó se deben ingresar Letras y/o números
+        » Cuanto gastó solo se puede ingresar números`)
     }
     if (!cuantoGasto) {
-        alert(`Ups, te olvidaste cargar el campo de "Cuanto gastó", 
-        Recordá que es necesario que los 3 campos estén completos :)`)   
+        alert(`Ups, te olvidaste cargar el campo de "Quién gastó", 
+        Recordá que es necesario que los 3 campos estén completos :)
+        » Quien gastó y en que gastó se deben ingresar Letras y/o números
+        » Cuanto gastó solo se puede ingresar números`)
     }
 
     if (quienCompra && queGasto && cuantoGasto) {

@@ -1,15 +1,22 @@
 :root{
-    ---Body: rgb(108, 45, 45);
+    ---Body: #fff;
     ---Header: color: rgba(86, 151, 140, 1);
     ---Presentacion: #1abc2d;
+
+    ---Encabezados: #bb7428;
+
     ---IngresoGastos: #544cbf;
-    ---ProcesoGatos: #bb7428;
-    ---GastoPracialesComprador: #123512;
-    ---GastosTotalesComprador: #413115;
+
+    ---GastosParcialesYTotales: #123512;
+
+
+
     ---ListaHorizontal: #324134;
-    ---GastoTotalJuntada: #453252;
-    ---DevolucionGasto: #943c8e;
+
+    ---DevolucionGasto: #a15c9d;
     ---Fotter: #55b032;
+
+    
     ---DarkModeFondo: #000;
 
     ---BtnReposo: #717171;
@@ -51,8 +58,14 @@ img {
 }
 
 
+h2{
+    color: #000;
+}
+
+
+
 h1,
-h2,
+
 h3{
     font-family: 'Barlow', sans-serif;
     color: aliceblue;
@@ -62,6 +75,8 @@ p{
     color: aliceblue;
 }
 
+
+/* ////////////////////////// */
 body{
     background-color: var(---Body);
 }
@@ -86,30 +101,37 @@ header {
     align-self: center;
     width: 100%;
 }
+
+
 /* PRESENTACIÓN */
 
 .presentacion{ 
 background-color: var(---Presentacion);
 box-shadow: 0px 4px 5px var(---Sombra);
 z-index: 1;
+height: 20px;
 }
 
-button{
+/* button{
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     height: 50%;
 align-items: center;
+} */
+
+
+/* ENCABEZADOS */
+
+.encabezados{
+    background-color:var(---Encabezados);
 }
 
 #btnAgregrarGasto{
     margin-top: 30px;
     height: 20px;
     background-color: var(---BtnReposo);
-    
-
-
-}
+    }
 
 /* INPUTS DE GASTOS  */
 .flexo{
@@ -118,12 +140,6 @@ align-items: center;
     align-items: center;
     row-gap: 10px;
     margin: 0px;
-
-
-
-
-
-
 }
 
 .iconoChico{
@@ -202,6 +218,15 @@ background-color: var(---BtnHover);
 } */
 
 
+.IdBotonModoOscuro{
+    display: flex;
+height: 100%;
+border-radius: 15px;
+align-self: stretch;
+
+
+}
+
 
 /* .botonera{
     background-color: rgb(145, 180, 146);
@@ -241,8 +266,16 @@ text-align: center;
 /* GASTOS PARCIALES DE COMPRADORES */
 
 .estadoGastosParciales {
-    background-color: var(---GastoPracialesComprador);
-    width: 50%;
+    background-color:var(---GastosParcialesYTotales);
+    /* width: 50%; */
+}
+
+.listadoHorizotalGastosParciales{
+    background-color:var(---ListaHorizontal);
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    
 }
 
 ol {
@@ -252,17 +285,13 @@ ol {
 b{
     color: brown;
 }
+
+
 /* .ol{
     background-color:deeppink;
 } */
 
-.listadoHorizotalGastosParciales{
-    background-color:var(---ListaHorizontal);
-    display: flex;
-    justify-content: space-between;
-    width: 90%;
-    
-}
+
 /* .icono {
     font-size: 25px;
     color: darkmagenta;
@@ -274,8 +303,8 @@ b{
 /* GASTOS TOTALES DE COMPRADORES */
 
 .gastosTotalesComprador {
-    background-color:var(---GastosTotalesComprador);
-    flex: 1;
+    background-color:var(---GastosParcialesYTotales);
+    /* flex: 1; */
 }
 
 
@@ -296,14 +325,16 @@ b{
 
 .gastosTotalesJuntada {
     background-color: rgb(166, 51, 219);
-    height: 150px;
+
 }
 
+#idCantidadDePersonas{
+    width: 100%;
+}
 /* DEVOLUCIONES DE GASTOS A COMPRADORES */
 
 .devolucionGastos {
     background-color: var(---DevolucionGasto);
-    height: 150px;
 }
 
 
@@ -341,69 +372,4 @@ a:hover {
     background-color: var(---DarkModeFondo);
 }
 
-/* MODO OSCURO */
-
-.darkmode {
-    background-color: var(---DarkModeFondo);;
-}
-
-.darkmode header {
-    background-color: var(---DarkModeFondo);;
-}
-
-.darkmode .estadoGastosParciales{
-    background-color: var(---DarkModeFondo);;
-}
-
-.darkmode .columnaTotales{
-    background-color: var(---DarkModeFondo);;
-}
-
-.darkmode .gastosTotalesJuntada{
-    background-color: var(---DarkModeFondo);;
-}
-
-.darkmode .cantidadPersonas{
-    background-color: var(---DarkModeFondo);;
-}
-
-.darkmode .gastosTotalesComprador{
-    background-color: var(---DarkModeFondo);;
-}
-
-.darkmode .estadoGastosParciales{
-    background-color: var(---DarkModeFondo);;
-}
-
-.darkmode footer {
-    background-color: var(---DarkModeFondo);;
-}
-
-.darkmode .inputs{
-    background-color: var(---DarkModeFondo);;
-}
-
-.darkmode .devolucionGastos{
-    background-color: var(---DarkModeFondo);;
-}
-
-.darkmode
-h1,
-h2,
-h3{
-    font-family: 'Barlow', sans-serif;
-    color: aliceblue;
-}
-
-.darkmode,
-p{
-    font-family: 'Barlow', sans-serif;
-    color: aliceblue;
-}
-
-
-.darkmode li{
-    font-family: 'Barlow', sans-serif;
-    color: aliceblue;
-}
 

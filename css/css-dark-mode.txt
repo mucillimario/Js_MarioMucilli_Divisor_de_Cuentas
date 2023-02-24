@@ -1,0 +1,65 @@
+/* 
+/* MODO OSCURO */
+
+.darkmode {
+    background-color: var(---DarkModeFondo);;
+}
+
+.darkmode header {
+    background-color: var(---DarkModeFondo);;
+}
+
+.darkmode .estadoGastosParciales{
+    background-color: var(---DarkModeFondo);;
+}
+
+.darkmode .columnaTotales{
+    background-color: var(---DarkModeFondo);;
+}
+
+.darkmode .gastosTotalesJuntada{
+    background-color: var(---DarkModeFondo);;
+}
+
+.darkmode .cantidadPersonas{
+    background-color: var(---DarkModeFondo);;
+}
+
+.darkmode .gastosTotalesComprador{
+    background-color: var(---DarkModeFondo);;
+}
+
+.darkmode .estadoGastosParciales{
+    background-color: var(---DarkModeFondo);;
+}
+
+.darkmode footer {
+    background-color: var(---DarkModeFondo);;
+}
+
+.darkmode .inputs{
+    background-color: var(---DarkModeFondo);;
+}
+
+.darkmode .devolucionGastos{
+    background-color: var(---DarkModeFondo);;
+}
+
+.darkmode h1,
+h2,
+h3{
+    font-family: 'Barlow', sans-serif;
+    color: rgb(51, 120, 180);
+}
+
+.darkmode,
+p{
+    font-family: 'Barlow', sans-serif;
+    color: aliceblue;
+}
+
+
+.darkmode li{
+    font-family: 'Barlow', sans-serif;
+    color: aliceblue;
+} */
