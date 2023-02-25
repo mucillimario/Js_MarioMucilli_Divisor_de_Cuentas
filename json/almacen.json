@@ -1,72 +1,72 @@
 [
   {
     "titulo": "Agua",
-    "imagen": "img/Picture (10).jpg",
+    "imagen": "img/agua.svg",
     "id": "idAgua"
   },
   {
     "titulo": "Bebidas con alcohol",
-    "imagen": "img/bebidas-mezcladas.jpg",
+    "imagen": "img/bebidascon.svg",
     "id": "idBebidasAlcoholicasMezcladas"
   },
   {
     "titulo": "Bebidas sin alcohol",
-    "imagen": "img/bebidas-sin-alcohol.jpg",
+    "imagen": "img/bebidassin.svg",
     "id": "idBebidasSinAlcohol"
   },
   {
     "titulo": "Carne",
-    "imagen": "img/carne.jpg",
+    "imagen": "img/carne.svg",
     "id": "idCarne"
   },
   {
     "titulo": "Dulces y caramelos",
-    "imagen": "img/dulces-caramelos.jpg",
+    "imagen": "img/dulces-caramelos.svg",
     "id": "idDulcesYCaramelos"
   },
   {
-    "titulo": "Empanadas",
-    "imagen": "img/empanadas.jpg",
-    "id": "idEmpanadas"
-  },
-  {
-    "titulo": "Gaseosas",
-    "imagen": "img/gaseosas.jpg",
-    "id": "idGaseosas"
+    "titulo": "Hamburguesa",
+    "imagen": "img/hamburguesa.svg",
+    "id": "idHamburguesa"
   },
   {
     "titulo": "Helado",
-    "imagen": "img/helado.jpg",
+    "imagen": "img/helado.svg",
     "id": "idHelado"
   },
   {
     "titulo": "Hielo",
-    "imagen": "img/hielo.jpg",
+    "imagen": "img/hielo.svg",
     "id": "idHielo"
   },
   {
+    "titulo": "Pan",
+    "imagen": "img/pan.svg",
+    "id": "idPan"
+  },
+  {
     "titulo": "Pasteles y tortas",
-    "imagen": "img/pasteles-tortas.jpg",
+    "imagen": "img/pasteles-tortas.svg",
     "id": "idPastelesYTortas"
   },
   {
     "titulo": "Pizza",
-    "imagen": "img/pizza.jpg",
+    "imagen": "img/pizza.svg",
     "id": "idPizza"
     },
     {
     "titulo": "Sándwiches",
-    "imagen": "img/sandwiches.jpg",
+    "imagen": "img/sandwiches.svg",
     "id": "idSandwiches"
     },
     {
-      "titulo": "Verduras",
-      "imagen": "img/verduras.jpg",
-      "id": "idverduras"
+      "titulo": "Sancks",
+      "imagen": "img/snacks.svg",
+      "id": "idSancks"
       },
-      {
-        "titulo": "Otro",
-        "imagen": "img/otro.jpg",
-        "id": "idvotro"
-        }
+    {
+      "titulo": "Verduras",
+      "imagen": "img/verduras.svg",
+      "id": "idverduras"
+      }
     ]
