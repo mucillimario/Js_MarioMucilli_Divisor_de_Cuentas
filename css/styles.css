@@ -87,17 +87,12 @@ main {
 
 header {
     background-color: var(---Header);
-    height: 12rem;
+    height: 20vh;
     background-image: url(/img/header-01.png);
     background-position: center center;
     background-size: cover;
 }
 
-.headerText {
-    align-content: center;
-    align-self: center;
-    width: 100%;
-}
 
 
 /* PRESENTACIÓN */
