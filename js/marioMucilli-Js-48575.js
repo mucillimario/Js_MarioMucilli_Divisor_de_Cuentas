@@ -44,13 +44,13 @@ BtnCalcularTotales.addEventListener("click", function () {
     let quienesCompraronOrdenado = quienesCompraron.sort(function (a, b) {
         return b.sumaTotalPorComprador - a.sumaTotalPorComprador
     })
-    //////////////////////----////////////////////// se sumo     document.getElementById(`listadoGastosTotalesComprador`).innerHTML = "";
+
     document.getElementById(`listadoGastosTotalesComprador`).innerHTML = "";
     document.getElementById(`idGastoTotal`).innerHTML = "";
     document.getElementById(`idDevolucion`).innerHTML = ""
 
 
-    //////////////////////----//////////////////////
+
     for (indice in quienesCompraronOrdenado) {
         quienesCompraronOrdenado[indice].mostrarCompraTotalComprador()
     }
@@ -145,9 +145,7 @@ function CompradorJuntada(nombre, que, cuanto) {
         `
         divContenedor.className = `listadoHorizotalGastosParciales`
 
-        
         nuevoGastoListadoParcial.appendChild(divContenedor)
-
         document.getElementById(`listadoGastosParciales`).appendChild(nuevoGastoListadoParcial)
     };
 }
@@ -162,7 +160,7 @@ function QuienGastoJuntada(nombre, sumaTotalPorComprador) {
     this.mostrarCompraTotalComprador = function () {
 
         const totalGastoCompradorListado = document.createElement(`li`)
-        totalGastoCompradorListado.innerText = `<h6><b>${this.nombreComprador}</b> gastó en total <b>${formatoMoneda(this.sumaTotalPorComprador)}</b></h6>`
+        totalGastoCompradorListado.innerHTML = `<b>${this.nombreComprador}</b> gastó en total <b>${formatoMoneda(this.sumaTotalPorComprador)}</b>`
         document.getElementById(`listadoGastosTotalesComprador`).appendChild(totalGastoCompradorListado)
     };
 }
@@ -186,13 +184,6 @@ btnBorrarTODO.addEventListener("click", borrarTodo)
 
 
 
-///// borra un gasto parcial de la lista 
-
-
-
-
-////// Evento del boton Agregar cantidad de personas, que dispara la sumatoria total de gastos y genera el promedio por persona
-
 
 // Evento que escucha el click de la carga de cantidad de personas
 
@@ -211,18 +202,16 @@ BtnCantidadDePersonas.addEventListener("click", function () {
     // renderizar el gasto por persona, cuando click en boton "calcular" 
 
     const pGastoTotal = document.getElementById(`idGastoTotal`)
-    //////////////////////----//////////////////////// se le sumo el innerHTML = "";
+
     pGastoTotal.innerHTML = "";
-    //////////////////////----//////////////////////
+
     pGastoTotal.innerHTML = (`<h6>» El total de las compras fueron <b>${formatoMoneda(gastoTotal)}<b/>.<br>» Ingresaste que las compras se dividen en <b>${cantidadDePersonas}</b> integrantes .<br>» Se deben devolver <b>$${gastoPromedioPersona.toFixed(2)}</b> por persona.</h6>`)
 
     // comienza a calcular devoluciones por cada comprador
 
-    //////////////////////----//////////////////////  se quito la linea "    const olDevolucionPorComprador = document.getElementById(`idDevolucion`)" y se la saco del for que esta abajo!
-    // se le sumo el innerHTML = "";
     const olDevolucionPorComprador = document.getElementById(`idDevolucion`)
     olDevolucionPorComprador.innerHTML = "";
-    //////////////////////----//////////////////////
+
 
     for (indice in quienesCompraron) {
 
@@ -258,8 +247,5 @@ function formatoMoneda(moneda) {
 
 function store(value) {
     localStorage.setItem(`darkmode`, value)
-
-
 }
-
 

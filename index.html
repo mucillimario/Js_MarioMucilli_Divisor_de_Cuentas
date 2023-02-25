@@ -29,24 +29,18 @@
         <!-- Header -->
         <header class="row">
             <div class="col-md headerLogo">
-<!-- <img src="/img/" alt=""> -->
             </div>
         </header>
 
         <!-- Presentación y botón -->
         <div class="row presentacion">
             <div class="col-md-11  col-11">
-                <p>Esta Calculadora divisora de gastos es un trabajo práctico del curso de Java Script. Se encuentrá en
-                    la versión 0.01. Busqué lograr algo rápido e intuitivo para que elijas esta calculadora antes que
-                    tomar lapíz y papel.
-                </p>
+                <h5>Esta calculadora divisora de gastos es un trabajo práctico del curso de Java Script. Busqué lograr algo rápido e intuitivo para que elijas esta calculadora antes que
+                    tomar lapíz y papel. Versión 1.0
+                </h5>
             </div>
             <div class="col-md-1 col-1 classBotonNoche">
-
-                <button id="IdBotonModoOscuro"></i>
-                    Modo Oscuro <i class="fa-solid fa-circle-half-stroke"> </i></button>
-
-
+                <button id="IdBotonModoOscuro" class="botonEstilo"></i> Modo Oscuro</i></button>
             </div>
         </div>
 
@@ -65,9 +59,9 @@
                     <label for="idQuienGasto">
                         <h5>Quien gastó?</h5>
                     </label>
-                    <input class="" type="text" id="idQuienGasto" size="20" placeholder="Ingresá nombre o apodo">
+                    <input class="" type="text" id="idQuienGasto" size="20" placeholder="Ingresá nombre o apodo de la persona">
                     <div class="textodeapoyo">
-                        <p>Aqui va un texto de ejemplo o requerido</p>
+                        <p>*Campo requerido *Campo alfanumérico</p>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6 flexo">
@@ -79,17 +73,16 @@
                     </label>
 
                     <!-- Cuanto opciones predefinidas-->
-
                     <div id="almacen" class="">
                         <select name="Hola" id="hola01" size="15">
                             <option disabled selected size="30"> Puedes seleccionar una opción
                             </option>
                         </select>
-                        <input class=" inputAlto" type="text" id="idQueGasto" size="6" placeholder="Elije o ingresa lo que compraste">
-
+                        <input class=" inputAlto" type="text" id="idQueGasto" size="6"
+                            placeholder="Elije o ingresa lo que compraste">
                     </div>
                     <div class="textodeapoyo">
-                        <p>Aqui va un texto de ejemplo o requerido</p>
+                        <p>*Campo requerido *Campo alfanumérico</p>
                     </div>
 
 
@@ -101,17 +94,16 @@
                     <label for="idCuantoGasto">
                         <h5>Cuanto gasto?</h5>
                     </label>
-                    <input class="" type="text" id="idCuantoGasto" size="20" placeholder="Ingresá el monto gastado">
+                    <input class="" type="text" id="idCuantoGasto" size="20" placeholder="Ingresá el monto gastado según la compra cargada">
                     <div class="textodeapoyo">
-                        <p>Aqui va un texto de ejemplo o requerido</p>
+                        <p>*Campo requerido *Campo numérico</p>
                     </div>
                 </div>
 
                 <!-- Div que contiene el botón -->
                 <div class="col-md-3 col-sm-6 flexo">
                     <i class="fa-solid fa-plus iconoGrande"></i>
-                    <input type="button" class="estilosbotones" id=btnAgregrarGasto
-                        value="Quiero agregar este gasto parcial">
+                    <input type="button" id=btnAgregrarGasto value="Quiero agregar este gasto parcial" class="botonEstilo">
                 </div>
         </div>
         </form>
@@ -124,36 +116,17 @@
             </div>
 
             <div class="col-md-6  estadoGastosParciales">
-                <!-- contenido aquí -->
                 <h3> <i class="fa-solid fa-comments-dollar"></i> Gastos Ingresados</h3>
                 <ol id="listadoGastosParciales">
-                </ol>
-                <!-- Aca entran los li que se generean con ingresos del DOM -->
-                <!-- ESTO SE TIENE QUE ELIMINAR, ETSA FIJADO EN EL HTML PARA EL MOMENTO DEL ESTILADO -->
-                <div class="listadoHorizotalGastosParciales">
-                    <h6><b>${this.nombreComprador}</b> ingresó un gasto parcial de
-                        <b>${formatoMoneda(this.cuantoCompra)}</b> en <b>${this.queCompra}</b>
-                    </h6>
-                </div>
-                <!-- ESTO SE TIENE QUE ELIMINAR, ETSA FIJADO EN EL HTML PARA EL MOMENTO DEL ESTILADO -->
-                <input type="button" id="btnCalcularTotales" value="Calcular Totales :) ">
-                <input type="button" id="btnBorrarTODO" value="Borrar todo">
+                    <!-- Aca entran los li que se generean con ingresos del DOM -->
+                    <input type="button" id="btnCalcularTotales" value="Calcular Totales :)" class="botonEstilo">
+                    <input type="button" id="btnBorrarTODO" value="Borrar todo" class="botonEstilo">
             </div>
 
             <div class="col-md-6 gastosTotalesComprador">
-                <!-- contenido aquí -->
                 <h3> <i class="fa-solid fa-receipt"></i> Gastos por comprador</h3>
                 <ol id="listadoGastosTotalesComprador">
                     <!-- Aca entran los li que se generean con ingresos del DOM -->
-                    <!-- ESTO SE TIENE QUE ELIMINAR, ETSA FIJADO EN EL HTML PARA EL MOMENTO DEL ESTILADO -->
-                    <div class="listadoGastosTotalesComprador listadoHorizotalGastosParciales">
-                        <li>
-                            <h6><b>${this.nombreComprador}</b> gastó en total
-                                <b>${formatoMoneda(this.sumaTotalPorComprador)}</b>
-                            </h6>
-                        </li>
-                    </div>
-                    <!-- ESTO SE TIENE QUE ELIMINAR, ETSA FIJADO EN EL HTML PARA EL MOMENTO DEL ESTILADO -->
                 </ol>
             </div>
         </div>
@@ -180,11 +153,12 @@
                             <label class="form-label" for="idCantidadDePersonas">
                                 <h6>Cantidad de personas a dividir gastos?</h6>
                             </label>
-                            <div>
+                            <div class="input_boton_cantidadTotalDividir">
                                 <input class="" type="text" id="idCantidadDePersonas" required
-                                    placeholder="Ingrese números">
-                                <input type="button" id="btnCargarCantidadDePersonas" value="Calcular">
+                                    placeholder="Ingrese cantidad de comensales">
+                                <input type="button" id="btnCargarCantidadDePersonas" value="Calcular" class="botonEstilo">
                             </div>
+
 
                         </form>
 
@@ -200,18 +174,6 @@
                     <h3> <i class="fa-solid fa-chart-pie"> </i>Total gastado para esta hermosa juntada</h3>
                     <!-- Aca entran los li que se generean con ingresos del DOM -->
                     <p id="idGastoTotal"></p>
-
-
-                    <!-- ESTO SE TIENE QUE ELIMINAR, ETSA FIJADO EN EL HTML PARA EL MOMENTO DEL ESTILADO -->
-                    <h6>» El total de las compras fueron <b>${formatoMoneda(gastoTotal)}</b>.<br>»
-                        Ingresaste que
-                        las compras se dividen en <b>${cantidadDePersonas}</b> integrantes .<br>» Se deben
-                        devolver
-                        <b>$${gastoPromedioPersona.toFixed(2)}</b> por persona.
-                    </h6>
-                    <!-- ESTO SE TIENE QUE ELIMINAR, ETSA FIJADO EN EL HTML PARA EL MOMENTO DEL ESTILADO -->
-
-
                 </div>
             </div>
 
@@ -225,7 +187,6 @@
                 <h3> <i class="fa-solid fa-hand-holding-dollar"></i> Devolución a cada comprador </h3>
                 <ol id="idDevolucion">
                     <!-- Aca entran los li que se generean con ingresos del DOM -->
-
                 </ol>
             </div>
         </div>
