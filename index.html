@@ -35,9 +35,8 @@
         <!-- Presentación y botón -->
         <div class="row presentacion">
             <div class="col-md-11  col-11">
-                <h5>Esta calculadora divisora de gastos es un trabajo práctico del curso de Java Script. Busqué lograr
-                    algo rápido e intuitivo para que elijas esta calculadora antes que
-                    tomar lapíz y papel. Versión 1.0
+                <h5>Este es mi entrega final del curso de Java Script, es una divisora de gastos para juntada con seres queridos. Busqué lograr
+                    algo rápido e intuitivo para que la elijas antes que tomar lapíz y papel.
                 </h5>
             </div>
             <div class="col-md-1 col-1 classBotonNoche">
@@ -46,11 +45,11 @@
         </div>
 
 
-
         <!-- Ingreso de gastos por comprador -->
         <div class="row ingresoGastos inputs">
             <div class="col-md-12 encabezados ">
-                <h2><i class="fa-solid fa-arrow-right "></i> Ingreso de gastos</h2>
+
+                <h2><i class="fa-solid fa-arrow-right "></i> <u>Paso 01:</u> Ingreso de gastos</h2>
             </div>
             <form action="">
                 <div class="col-md-3 col-sm-6 flexo">
@@ -61,7 +60,7 @@
                         <h5>Quien gastó?</h5>
                     </label>
                     <input class="" type="text" id="idQuienGasto" size="20"
-                        placeholder="Ingresá nombre o apodo de la persona" >
+                        placeholder="Ingresá nombre o apodo de la persona">
                     <div class="textodeapoyo">
                         <p>*Campo requerido *Campo alfanumérico</p>
                     </div>
@@ -81,13 +80,11 @@
                             </option>
                         </select>
                         <input class=" inputAlto" type="text" id="idQueGasto" size="6"
-                            placeholder="Elije o ingresa lo que compraste" >
+                            placeholder="Elije o ingresa lo que compraste">
                     </div>
                     <div class="textodeapoyo">
                         <p>*Campo requerido *Campo alfanumérico</p>
                     </div>
-
-
 
                     <!-- Cuanto input manual-->
                 </div>
@@ -97,7 +94,7 @@
                         <h5>Cuanto gasto?</h5>
                     </label>
                     <input class="" type="text" id="idCuantoGasto" size="20"
-                        placeholder="Ingresá el monto gastado según la compra cargada" >
+                        placeholder="Ingresá el monto gastado según la compra cargada">
                     <div class="textodeapoyo">
                         <p>*Campo requerido *Campo numérico</p>
                     </div>
@@ -116,101 +113,70 @@
 
         <div class="row procesoDeGastos">
             <div class="col-md-12 encabezados">
-                <h2> <i class="fa-solid fa-arrow-right"> </i> Proceso de gastos</h2>
+                <h2> <i class="fa-solid fa-arrow-right"> </i> <u>Paso 02:</u> Proceso de gastos</h2>
             </div>
 
             <div class="col-md-6  estadoGastosParciales">
                 <h3> <i class="fa-solid fa-comments-dollar"></i> Gastos Ingresados</h3>
                 <ol id="listadoGastosParciales">
-<!-- //////ELMININAR ESTO, CUANDO LAS PRUEBAS EN EL HTML ESTEN CORRECTA, LAS PASO AL JS///////// -->
-<!-- <h6><b>Mario</b> ingresó un gasto parcial de <b>$ 1,000.00</b> en <b>Bebidas con alcohol</b></h6> -->
-<!-- //////ELMININAR ESTO, CUANDO LAS PRUEBAS EN EL HTML ESTEN CORRECTA, LAS PASO AL JS///////// -->
-
+                    <!-- Aca entran los li que se generean con ingresos del DOM -->
                 </ol>
-
-                <!-- Aca entran los li que se generean con ingresos del DOM -->
-
-
                 <input type="button" id="btnCalcularTotales" value="Calcular Totales :)" class="botonEstilo">
                 <input type="button" id="btnBorrarTODO" value="Borrar todo" class="botonEstilo">
-
             </div>
 
             <div class="col-md-6 gastosTotalesComprador">
                 <h3> <i class="fa-solid fa-receipt"></i> Gastos por comprador</h3>
                 <ol id="listadoGastosTotalesComprador">
                     <!-- Aca entran los li que se generean con ingresos del DOM -->
-                    
-<!-- //////PRUEBAS EN EL HTML PARA PASARLO AL JS///////// -->
-<!-- <li><b>Mario</b> gastó en total <b>$ 2,000.00</b></li> -->
-<!-- //////PRUEBAS EN EL HTML PARA PASARLO AL JS///////// -->
                 </ol>
             </div>
         </div>
-
         <div class="row  devolucionGastos">
 
             <!-- Totales y Devoluciones -->
 
             <div class="row TotalesyDevoluciones">
                 <div class="col-md-12 encabezados">
-                    <h2> <i class="fa-solid fa-arrow-right"> </i> Totales y devoluciónes</h2>
+                    <h2> <i class="fa-solid fa-arrow-right"> </i> <u>Paso 03:</u> Devoluciónes</h2>
                 </div>
             </div>
-
 
             <div class="col-md-4">
                 <h3> <i class="fa-solid fa-receipt"></i> </i> Cantidad de personas a dividir</h3>
                 <div class="gastosTotalesJuntada">
                     <div class="cantidadPersonas">
                         <form action="" class="formCargaCantidadPersonas flexo">
-                            <label  for="idCantidadDePersonas">
-                                <h6>Cantidad de personas a dividir gastos?</h6>
+                            <label for="idCantidadDePersonas">
+                                <h5>Cantidad de personas a dividir gastos?</h5>
                             </label>
                             <div class="input_boton_cantidadTotalDividir">
                                 <input class="" type="text" id="idCantidadDePersonas" required
                                     placeholder="Ingrese cantidad de comensales">
+                                <div class="textodeapoyo">
+                                    <p>*Campo requerido *Ingrese números enteros</p>
+                                </div>
                                 <input type="button" id="btnCargarCantidadDePersonas" value="Calcular"
                                     class="botonEstilo">
                             </div>
-
-
                         </form>
-
                     </div>
                 </div>
             </div>
-
-
 
             <div class="col-md-4">
                 <div class="totalGastadoJuntadaTodos">
 
                     <h3> <i class="fa-solid fa-chart-pie"> </i>Total gastado para esta hermosa juntada</h3>
                     <!-- Aca entran los li que se generean con ingresos del DOM -->
-
-<!-- //////ELMININAR ESTO, CUANDO LAS PRUEBAS EN EL HTML ESTEN CORRECTA, LAS PASO AL JS///////// -->
-<!-- <h6>» El total de las compras fueron <b>$ 2,000.00<b>.<br>» Ingresaste que las compras se dividen en <b>50</b> integrantes .<br>» Se deben devolver <b>$40.00</b> por persona.</b></b></h6> -->
-<!-- //////ELMININAR ESTO, CUANDO LAS PRUEBAS EN EL HTML ESTEN CORRECTA, LAS PASO AL JS///////// -->
                     <p id="idGastoTotal"></p>
                 </div>
             </div>
-
-
-
-
-
-
 
             <div class="col-md-4 ">
                 <h3> <i class="fa-solid fa-hand-holding-dollar"></i> Devolución a cada comprador </h3>
                 <ol id="idDevolucion">
                     <!-- Aca entran los li que se generean con ingresos del DOM -->
-
-<!-- //////ELMININAR ESTO, CUANDO LAS PRUEBAS EN EL HTML ESTEN CORRECTA, LAS PASO AL JS///////// -->
-<!-- <b>» Mario debe recuperar $ 1,960.00</b> -->
-<!-- //////ELMININAR ESTO, CUANDO LAS PRUEBAS EN EL HTML ESTEN CORRECTA, LAS PASO AL JS///////// -->
-
                 </ol>
             </div>
         </div>
@@ -220,18 +186,16 @@
             <div class="col-md">
                 <p>Mario Mucilli - Js #48575 - Divisor de gastos <br>
                     Diseñador Gráfico - Diseñador Ux/Ui - Estudiante de la Carrera de Desarrollo de Aplicaciones<br>
-                    Febrero 2023
+                    Versión 1.0 - Febrero 2023
                 </p>
             </div>
         </footer>
     </main>
 
+    <script src="https://kit.fontawesome.com/7394c787a3.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/marioMucilli-Js-48575.js"></script>
+    <script src="js/modoOscuro.js"></script>
+    <script src="js/peticionAlmacen.js"></script>
 </body>
-
-<script src="https://kit.fontawesome.com/7394c787a3.js" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script src="js/marioMucilli-Js-48575.js"></script>
-<script src="js/modoOscuro.js"></script>
-<script src="js/peticionAlmacen.js"></script>
-
 </html>

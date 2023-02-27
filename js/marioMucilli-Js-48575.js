@@ -30,32 +30,7 @@ fetch("json/almacen.json")
     })
 
 
-// EVENTOS //
-
-// Evento calcular totales
-
-const BtnCalcularTotales = document.getElementById(`btnCalcularTotales`)
-
-BtnCalcularTotales.addEventListener("click", function () {
-
-
-    // Sort, ordena el listado de compradores total de mayor a menor gasto    
-
-    let quienesCompraronOrdenado = quienesCompraron.sort(function (a, b) {
-        return b.sumaTotalPorComprador - a.sumaTotalPorComprador
-    })
-
-    document.getElementById(`listadoGastosTotalesComprador`).innerHTML = "";
-    document.getElementById(`idGastoTotal`).innerHTML = "";
-    document.getElementById(`idDevolucion`).innerHTML = ""
-
-
-
-    for (indice in quienesCompraronOrdenado) {
-        quienesCompraronOrdenado[indice].mostrarCompraTotalComprador()
-    }
-
-})
+    // PASO 01 - Ingreso de los gastos //
 
 // Evento que escucha el click de la carga de gastos
 
@@ -150,6 +125,33 @@ function CompradorJuntada(nombre, que, cuanto) {
     };
 }
 
+// PASO 02 - Proceso de los gastos //
+
+
+// Evento calcular totales
+
+const BtnCalcularTotales = document.getElementById(`btnCalcularTotales`)
+
+BtnCalcularTotales.addEventListener("click", function () {
+
+
+    // Sort, ordena el listado de compradores total de mayor a menor gasto    
+
+    let quienesCompraronOrdenado = quienesCompraron.sort(function (a, b) {
+        return b.sumaTotalPorComprador - a.sumaTotalPorComprador
+    })
+
+    document.getElementById(`listadoGastosTotalesComprador`).innerHTML = "";
+    document.getElementById(`idGastoTotal`).innerHTML = "";
+    document.getElementById(`idDevolucion`).innerHTML = ""
+
+
+
+    for (indice in quienesCompraronOrdenado) {
+        quienesCompraronOrdenado[indice].mostrarCompraTotalComprador()
+    }
+
+})
 
 ///// Función que hace la sumatoria del gasto total de cada comprador.  
 
@@ -160,7 +162,7 @@ function QuienGastoJuntada(nombre, sumaTotalPorComprador) {
     this.mostrarCompraTotalComprador = function () {
 
         const totalGastoCompradorListado = document.createElement(`li`)
-        totalGastoCompradorListado.innerHTML = `<b>${this.nombreComprador}</b> gastó en total <b>${formatoMoneda(this.sumaTotalPorComprador)}</b>`
+        totalGastoCompradorListado.innerHTML = `<h6><b>${this.nombreComprador}</b> gastó en total <b>${formatoMoneda(this.sumaTotalPorComprador)}</b></h6>`
         document.getElementById(`listadoGastosTotalesComprador`).appendChild(totalGastoCompradorListado)
     };
 }
@@ -183,7 +185,7 @@ function borrarTodo() {
 btnBorrarTODO.addEventListener("click", borrarTodo)
 
 
-
+// PASO 03 - Devoluciones //
 
 // Evento que escucha el click de la carga de cantidad de personas
 
@@ -205,7 +207,13 @@ BtnCantidadDePersonas.addEventListener("click", function () {
 
     pGastoTotal.innerHTML = "";
 
-    pGastoTotal.innerHTML = (`<h6>» El total de las compras fueron <b>${formatoMoneda(gastoTotal)}<b/>.<br>» Ingresaste que las compras se dividen en <b>${cantidadDePersonas}</b> integrantes .<br>» Se deben devolver <b>$${gastoPromedioPersona.toFixed(2)}</b> por persona.</h6>`)
+    pGastoTotal.innerHTML = (
+        `<h6>» El total de las compras fueron<b>${formatoMoneda(gastoTotal)}</b>.
+    <br>» Ingresaste que las compras se dividen en <b>${cantidadDePersonas}</b> integrantes.
+    <br>» Se deben devolver <b>$${gastoPromedioPersona.toFixed(2)}</b> por persona.</h6>
+        `)
+
+
 
     // comienza a calcular devoluciones por cada comprador
 
