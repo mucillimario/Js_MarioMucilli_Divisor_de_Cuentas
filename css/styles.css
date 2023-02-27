@@ -80,7 +80,7 @@ main {
 header {
     background-color: var(---Header);
     height: 20vh;
-    background-image: url(/img/header-01.png);
+    background-image: url(/img//header/header-01.png);
     background-position: center center;
     background-size: cover;
 }
@@ -163,7 +163,7 @@ form input[type="text"],
 
 
 form input[type="text"]::placeholder {
-    color: #000;
+    color: #4c4c4c;
 }
 
 form input[type="text"]:hover {

@@ -1,72 +1,72 @@
 [
   {
     "titulo": "Agua",
-    "imagen": "img/agua.svg",
+    "imagen": "img/icon_json/agua.svg",
     "id": "idAgua"
   },
   {
     "titulo": "Bebidas con alcohol",
-    "imagen": "img/bebidascon.svg",
+    "imagen": "img/icon_json/bebidascon.svg",
     "id": "idBebidasAlcoholicasMezcladas"
   },
   {
     "titulo": "Bebidas sin alcohol",
-    "imagen": "img/bebidassin.svg",
+    "imagen": "img/icon_json/bebidassin.svg",
     "id": "idBebidasSinAlcohol"
   },
   {
     "titulo": "Carne",
-    "imagen": "img/carne.svg",
+    "imagen": "img/icon_json/carne.svg",
     "id": "idCarne"
   },
   {
     "titulo": "Dulces y caramelos",
-    "imagen": "img/dulces-caramelos.svg",
+    "imagen": "img/icon_json/dulces-caramelos.svg",
     "id": "idDulcesYCaramelos"
   },
   {
     "titulo": "Hamburguesa",
-    "imagen": "img/hamburguesa.svg",
+    "imagen": "img/icon_json/hamburguesa.svg",
     "id": "idHamburguesa"
   },
   {
     "titulo": "Helado",
-    "imagen": "img/helado.svg",
+    "imagen": "img/icon_json/helado.svg",
     "id": "idHelado"
   },
   {
     "titulo": "Hielo",
-    "imagen": "img/hielo.svg",
+    "imagen": "img/icon_json/hielo.svg",
     "id": "idHielo"
   },
   {
     "titulo": "Pan",
-    "imagen": "img/pan.svg",
+    "imagen": "img/icon_json/pan.svg",
     "id": "idPan"
   },
   {
     "titulo": "Pasteles y tortas",
-    "imagen": "img/pasteles-tortas.svg",
+    "imagen": "img/icon_json/pasteles-tortas.svg",
     "id": "idPastelesYTortas"
   },
   {
     "titulo": "Pizza",
-    "imagen": "img/pizza.svg",
+    "imagen": "img/icon_json/pizza.svg",
     "id": "idPizza"
     },
     {
     "titulo": "Sándwiches",
-    "imagen": "img/sandwiches.svg",
+    "imagen": "img/icon_json/sandwiches.svg",
     "id": "idSandwiches"
     },
     {
       "titulo": "Sancks",
-      "imagen": "img/snacks.svg",
+      "imagen": "img/icon_json/snacks.svg",
       "id": "idSancks"
       },
     {
       "titulo": "Verduras",
-      "imagen": "img/verduras.svg",
+      "imagen": "img/icon_json/verduras.svg",
       "id": "idverduras"
       }
     ]
