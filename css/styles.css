@@ -80,7 +80,7 @@ main {
 header {
     background-color: var(---Header);
     height: 20vh;
-    background-image: url(/img//header/header-01.png);
+    background-image: url(./img//header/header-01.png);
     background-position: center center;
     background-size: cover;
 }
