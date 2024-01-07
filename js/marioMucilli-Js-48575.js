@@ -30,7 +30,7 @@ fetch("json/almacen.json")
     })
 
 
-    // PASO 01 - Ingreso de los gastos //
+// PASO 01 - Ingreso de los gastos //
 
 // Evento que escucha el click de la carga de gastos
 
@@ -116,7 +116,7 @@ function CompradorJuntada(nombre, que, cuanto) {
 
         const nuevoGastoListadoParcial = document.createElement(`li`)
         let divContenedor = document.createElement(`div`)
-        divContenedor.innerHTML = `<h6><b>${this.nombreComprador}</b> ingresó un gasto parcial de <b>${formatoMoneda(this.cuantoCompra)}</b> en <b>${this.queCompra}</b></h6>
+        divContenedor.innerHTML = `<h6><b>${this.nombreComprador}</b> gastó <b>${formatoMoneda(this.cuantoCompra)}</b> en <b>${this.queCompra}</b></h6>
         `
         divContenedor.className = `listadoHorizotalGastosParciales`
 
@@ -208,7 +208,7 @@ BtnCantidadDePersonas.addEventListener("click", function () {
     pGastoTotal.innerHTML = "";
 
     pGastoTotal.innerHTML = (
-        `<h6>» El total de las compras fueron<b>${formatoMoneda(gastoTotal)}</b>.
+        `<h6>» El total de las compras fueron<b> ${formatoMoneda(gastoTotal)}</b>.
     <br>» Ingresaste que las compras se dividen en <b>${cantidadDePersonas}</b> integrantes.
     <br>» Se deben devolver <b>$${gastoPromedioPersona.toFixed(2)}</b> por persona.</h6>
         `)

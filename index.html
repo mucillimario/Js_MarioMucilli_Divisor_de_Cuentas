@@ -45,49 +45,52 @@
         <div class="presentacion">
             <div>
                 <h5>
-                    Entrega final del curso de Java Script, es divisor de gastos para juntada con amigos y
-                    amigas. Busqué lograr algo rápido e intuitivo para que la elijas antes que tomar lapíz y papel.
+                    • Sin necesidad de crearte una cuenta. <br>
+                    • Solo cargas los gastos, dividis y listo. <br>
+                    • Rápido y fácil, elige esta opción en lugar de papel y lápiz.
                 </h5>
             </div>
-
-
             <div class="BotonNoche">
-                <button id="IdBotonModoOscuro" class="botonEstilo"></i></i></button>
+                <button id="IdBotonModoOscuro" class="botonEstilo"></i>Activar modo oscuro</i></button>
             </div>
-
-
         </div>
 
 
-        <!-- PAS0 01 Ingreso de gastos por comprador -->
+        <!-- PAS0 01 - Ingreso de gastos por comprador -->
         <div class="Paso01">
             <div class="encabezados ">
                 <h2><i class="fa-solid fa-arrow-right "></i> <u>Paso 01:</u> Ingreso de gastos</h2>
             </div>
-            <form class="inputsDatos" action="">
+            <form class="flexBox" action="">
 
                 <!-- Quien -->
-                <div class="Quien flexInputs">
-                    <i class="fa-regular fa-user iconoGrande"></i>
-                    <label for="idQuienGasto">
-                        <h5>Quien gastó?</h5>
+                <div class="quien flexInputs">
+                    <div class="icon_text">
+                        <i class="fa-regular fa-user iconoGrande"></i>
+                        <label for="idQuienGasto">
+                            <h5>Quien gastó?</h5>
+                    </div>
+
                     </label>
                     <input class="" type="text" id="idQuienGasto" size="20" placeholder="Ingrese el nombre">
                     <div class="textodeapoyo">
-                        <p>*Campo requerido *Campo alfanumérico</p>
+                        <p>*Campo requerido <br>*Campo alfanumérico</p>
                     </div>
                 </div>
 
                 <!-- Que -->
-                <div class="Que flexInputs">
-                    <i class="fa-solid fa-clipboard-question iconoGrande"></i>
-                    <label for="idQueGasto">
-                        <h5>En que gastó?</h5>
+                <div class="que flexInputs">
+                    <div class="icon_text">
+                        <i class="fa-solid fa-clipboard-question iconoGrande"></i>
+                        <label for="idQueGasto">
+                            <h5>En que gastó?</h5>
+                    </div>
+
                     </label>
 
-                    <!-- Cuanto opciones predefinidas-->
+                    <!-- Opciones predefinidas-->
                     <div id="almacen" class="">
-                        <select name="Hola" id="hola01" size="15">
+                        <select id="opcionesPredefinidas" size="15">
                             <option disabled selected size="30"> Puedes seleccionar una opción
                             </option>
                         </select>
@@ -95,112 +98,129 @@
                             placeholder="Elije o ingresa lo que compraste">
                     </div>
                     <div class="textodeapoyo">
-                        <p>*Campo requerido *Campo alfanumérico</p>
+                        <p>*Campo requerido <br>*Campo alfanumérico</p>
                     </div>
 
-                    <!-- Cuanto input manual-->
+
                 </div>
-                <div class="col-md-3 col-sm-6 flexo">
-                    <i class="fa-solid fa-dollar-sign iconoGrande"></i>
-                    <label for="idCuantoGasto">
-                        <h5>Cuanto gasto?</h5>
-                    </label>
-                    <input class="" type="text" id="idCuantoGasto" size="20"
-                        placeholder="Ingresá el monto gastado según la compra cargada">
+                <!-- Cuanto-->
+                <div class="cuanto flexInputs">
+                    <div class="icon_text">
+                        <i class="fa-solid fa-dollar-sign iconoGrande"></i>
+                        <label for="idCuantoGasto">
+                            <h5>Cuanto gasto?</h5>
+                        </label>
+                    </div>
+                    <input class="" type="text" id="idCuantoGasto" size="20" placeholder="Ingrese monto">
                     <div class="textodeapoyo">
-                        <p>*Campo requerido *Campo numérico</p>
+                        <p>*Campo requerido <br>*Campo alfanumérico</p>
                     </div>
                 </div>
 
-                <!-- Div que contiene el botón -->
-                <div class="col-md-3 col-sm-6 flexo">
-                    <i class="fa-solid fa-plus iconoGrande"></i>
-                    <input type="button" id=btnAgregrarGasto value="Quiero agregar este gasto parcial"
-                        class="botonEstilo">
+                <!-- Aregar Gasto -->
+                <div class="agregar flexInputs">
+
+                    <div class="icon_text">
+                        <i class="fa-solid fa-plus iconoGrande"></i>
+                        <label>
+                            <h5>Agregar gasto</h5>
+                        </label>
+                    </div>
+                    <input type="button" id=btnAgregrarGasto value="Agregar gasto parcial" class="botonEstilo">
+
                 </div>
         </div>
 
 
-        <!-- Proceso de gastos por comprador -->
+        <!-- PAS0 02 - Proceso de gastos por comprador -->
 
-        <div class="row procesoDeGastos">
-            <div class="col-md-12 encabezados">
+        <div class="Paso02">
+            <div class=" encabezados">
                 <h2> <i class="fa-solid fa-arrow-right"> </i> <u>Paso 02:</u> Proceso de gastos</h2>
             </div>
+            <div class="flexBox">
 
-            <div class="col-md-6  estadoGastosParciales">
-                <h3> <i class="fa-solid fa-comments-dollar"></i> Gastos Ingresados</h3>
-                <ol id="listadoGastosParciales">
-                    <!-- Aca entran los li que se generean con ingresos del DOM -->
-                </ol>
-                <input type="button" id="btnCalcularTotales" value="Calcular Totales :)" class="botonEstilo">
-                <input type="button" id="btnBorrarTODO" value="Borrar todo" class="botonEstilo">
-            </div>
-
-            <div class="col-md-6 gastosTotalesComprador">
-                <h3> <i class="fa-solid fa-receipt"></i> Gastos por comprador</h3>
-                <ol id="listadoGastosTotalesComprador">
-                    <!-- Aca entran los li que se generean con ingresos del DOM -->
-                </ol>
-            </div>
-        </div>
-        <div class="row  devolucionGastos">
-
-            <!-- Totales y Devoluciones -->
-
-            <div class="row TotalesyDevoluciones">
-                <div class="col-md-12 encabezados">
-                    <h2> <i class="fa-solid fa-arrow-right"> </i> <u>Paso 03:</u> Devoluciónes</h2>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <h3> <i class="fa-solid fa-receipt"></i> </i> Cantidad de personas a dividir</h3>
-                <div class="gastosTotalesJuntada">
-                    <div class="cantidadPersonas">
-                        <form action="" class="formCargaCantidadPersonas flexo">
-                            <label for="idCantidadDePersonas">
-                                <h5>Cantidad de personas a dividir gastos?</h5>
-                            </label>
-                            <div class="input_boton_cantidadTotalDividir">
-                                <input class="" type="text" id="idCantidadDePersonas" required
-                                    placeholder="Ingrese cantidad de comensales">
-                                <div class="textodeapoyo">
-                                    <p>*Campo requerido *Ingrese números enteros</p>
-                                </div>
-                                <input type="button" id="btnCargarCantidadDePersonas" value="Calcular"
-                                    class="botonEstilo">
-                            </div>
-                        </form>
+                <div class="estadoGastosParciales">
+                    <h3> <i class="fa-solid fa-comments-dollar"></i> Gastos Ingresados</h3>
+                    <ol id="listadoGastosParciales">
+                        <!-- Aca entran los li que se generean con ingresos del DOM -->
+                    </ol>
+                    <div class="dosBotones">
+                        <input type="button" id="btnCalcularTotales" value="Sumar Gastos" class="botonEstilo">
+                        <input type="button" id="btnBorrarTODO" value="Borrar todo" class="botonEstilo">
                     </div>
+
                 </div>
+
+                <div class="gastosTotalesComprador">
+                    <h3> <i class="fa-solid fa-receipt"></i> Gastos por comprador</h3>
+                    <ol id="listadoGastosTotalesComprador">
+                        <!-- Aca entran los li que se generean con ingresos del DOM -->
+                    </ol>
+                </div>
+
             </div>
 
-            <div class="col-md-4">
-                <div class="totalGastadoJuntadaTodos">
+        </div>
 
-                    <h3> <i class="fa-solid fa-chart-pie"> </i>Total gastado para esta hermosa juntada</h3>
+
+        <!-- PASO 03 - Devoluciones -->
+        <div class="Paso03">
+            <div class="encabezados">
+                <h2> <i class="fa-solid fa-arrow-right"> </i> <u>Paso 03:</u> Devoluciones</h2>
+            </div>
+
+
+            <div class="flexBox">
+                <div class="cantidadPersonas">
+                    <form action="" class="formCargaCantidadPersonas flexo">
+                        <label for="idCantidadDePersonas">
+                            <h3> <i class="fa-solid fa-receipt"></i> </i> Cantidad de personas a dividir</h3>
+                            <p>!!! Recuerde incluirse en la cantidad !!!</p>
+                        </label>
+                        <div class="input_boton_cantidadTotalDividir">
+                            <input class="" type="text" id="idCantidadDePersonas" required
+                                placeholder="Ingrese cantidad de personas">
+                            <div class="textodeapoyo">
+                                <p>*Campo requerido *Campo alfanumérico</p>
+                            </div>
+                            <input type="button" id="btnCargarCantidadDePersonas" value="Calcular" class="botonEstilo">
+                        </div>
+                    </form>
+                </div>
+
+                <div class="totalGastadoJuntada">
+                    <h3> <i class="fa-solid fa-chart-pie"> </i>Total gastado para esta juntada</h3>
                     <!-- Aca entran los li que se generean con ingresos del DOM -->
                     <p id="idGastoTotal"></p>
                 </div>
+
+
+                <div class="devolucionesCompradores">
+                    <h3> <i class="fa-solid fa-hand-holding-dollar"></i> Devolución a cada comprador </h3>
+                    <ol id="idDevolucion">
+                        <!-- Aca entran los li que se generean con ingresos del DOM -->
+                    </ol>
+                </div>
             </div>
 
-            <div class="col-md-4 ">
-                <h3> <i class="fa-solid fa-hand-holding-dollar"></i> Devolución a cada comprador </h3>
-                <ol id="idDevolucion">
-                    <!-- Aca entran los li que se generean con ingresos del DOM -->
-                </ol>
-            </div>
         </div>
 
 
-        <footer class="row">
-            <div class="col-md">
-                <p>Mario Mucilli - Js #48575 - Divisor de gastos <br>
-                    Diseñador Gráfico - Diseñador Ux/Ui - Estudiante de la Carrera de Desarrollo de Aplicaciones<br>
-                    Versión 1.0 - Febrero 2023
-                </p>
-            </div>
+
+
+
+
+
+
+
+
+
+        <footer>
+            <p>Mario Mucilli - Divisor de gastos <br>
+                Diseñador Gráfico - Diseñador Ux/Ui - Desarrollador de Aplicaciones<br>
+                Versión 1.0 - Febrero 2023
+            </p>
         </footer>
     </main>
 

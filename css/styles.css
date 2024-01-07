@@ -3,22 +3,14 @@
     ---Header: #fff;
     ---Presentacion: #025839;
     ---Encabezados: #9E570C;
+    ---Separadoras: #f0ac63;
     ---Body: #e3d6aa;
-
-
-    ---GastosParcialesYTotales: #74601c;
-    ---DevolucionGasto: #a6861c;
-
-
-  
-    ---ListaHorizontal: #324134;
-
     ---Fotter: #454545;
-    ---DarkModeFondo: #000;
     ---BtnReposo: #717171;
     ---BtnHover: #e3d6aa;
     ---BtnPresionado: #121212;
     ---Sombra: #033121;
+    ---DarkModeFondo: #151515;
 }
 
 
@@ -44,7 +36,8 @@ h1 {
 }
 
 h2 {
-    color: var(---Body)
+    color: var(---Body);
+    font-size: 2.2rem;
 }
 
 h3 {
@@ -76,9 +69,11 @@ body {
     background-color: var(---Body);
 }
 
-main {
+
+.flexBox {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 /* HEADER */
@@ -99,21 +94,24 @@ header {
     background-color: var(---Presentacion);
     box-shadow: 0px 2px 2px var(---Sombra);
     z-index: 1;
-    display:flex;
+    display: flex;
     justify-content: space-evenly;
-padding:1rem;
+    padding: 1rem;
+    align-items: center;
 }
 
 .presentacion h5 {
     color: #fff;
-    display:flex;
+    display: flex;
     justify-content: center;
+
     padding-top: 1rem;
 }
 
-.BotonNoche button{
+.BotonNoche button {
     min-width: 150px;
 }
+
 /* ENCABEZADOS */
 
 .encabezados {
@@ -121,56 +119,67 @@ padding:1rem;
     padding: .5rem 0rem .5rem 4rem;
 }
 
-#btnAgregrarGasto {
-    margin-top: 30px;
-    height: 20px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-
+.titulos {
+    padding: .5rem 0rem .5rem 4rem;
 }
 
+
 /* INPUTS DE GASTOS  */
-.inputsDatos{
+
+.icon_text{
+    margin: 1rem;
     display: flex;
-    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    justify-content: center;
+
 }
 
 .flexInputs {
     display: flex;
     flex-direction: column;
     align-items: center;
-    row-gap: 10px;
-    margin: 0px;
-}
+    row-gap: .5rem;
 
+}
 
 .iconoGrande {
-    font-size: 50px;
+    font-size: 40px;
     color: var(---Presentacion);
-    padding: 5px;
-    height: 54px;
+    height: 50px;
+    padding-right: 1rem;
 }
 
+.quien,
+.que,
+.cuanto,
+.agregar,
+.estadoGastosParciales,
+.gastosTotalesComprador {
+    width: 25%;
+    min-width: 250px;
+    border-left: dashed var(---Separadoras) 2px;
+}
+
+
+
+/* PASO 01 */
 /* Inputs y form */
 
-form {
+.inputsDatos {
     display: flex;
     flex-wrap: wrap;
 }
 
-
-
-
 form input[type="text"],
 #btnAgregrarGasto {
-    height: 20px;
+    height: 30px;
     cursor: pointer;
     width: 80%;
     border-style: none;
     text-align: center;
 
 }
-
 
 form input[type="text"]::placeholder {
     color: #4c4c4c;
@@ -194,35 +203,47 @@ form input[type="text"]:focus {
     text-align: center;
 }
 
-#hola01 {
+#opcionesPredefinidas {
     width: 80%;
 }
 
+
+#btnAgregrarGasto {
+    margin-bottom:2rem;
+}
+/* PASO 02 */
 /* GASTOS PARCIALES Y TOTALES DE COMPRADORES */
 
-.procesoDeGastos {
-    background-color: var(---ProcesoGatos);
-    display: flex;
+.estadoGastosParciales,
+.gastosTotalesComprador {
+    width: 50%;
+    min-width: 250px;
+    border-left: dashed var(---Separadoras) 2px;
+    padding: 1rem;
 }
+
+
+
 
 /* GASTOS PARCIALES DE COMPRADORES */
 
-.estadoGastosParciales {
-    background-color: var(---GastosParcialesYTotales);
-    width: 50%;
-}
-
-b{
+b {
     color: brown;
 }
 
-li{
+li {
     background-color: var(---Body);
+}
+
+.dosBotones {
+    display: flex;
+    justify-content: space-between;
+
 }
 
 #btnBorrarTODO {
     background-color: #c2c2c2;
-    }
+}
 
 #btnCalcularTotales {
     width: 80%
@@ -230,14 +251,21 @@ li{
 
 /* GASTOS TOTALES DE COMPRADORES */
 
-.gastosTotalesComprador {
-    background-color: var(---GastosParcialesYTotales);
+
+/* PASO 03 */
+.cantidadPersonas,
+.totalGastadoJuntada,
+.devolucionesCompradores {
+    width: 33.3%;
+    min-width: 250px;
+    border-left: dashed var(---Separadoras) 2px;
+    padding: 1rem;
 }
 
 /* CANTIDAD DE PERSONAS A DIVIDIR */
 
-.formCargaCantidadPersonas{
-    margin-top:10px;
+.formCargaCantidadPersonas {
+    margin-top: 10px;
 }
 
 .input_boton_cantidadTotalDividir {
@@ -246,37 +274,31 @@ li{
     align-content: center;
     width: 100%;
     align-items: center;
+
 }
 
 
-#idCantidadDePersonas{
-    width: 40%;
-    margin-bottom: 10px
+#idCantidadDePersonas {
+    width: 100%;
+    height: 30px;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
 
-#btnCargarCantidadDePersonas{
+#btnCargarCantidadDePersonas {
     width: 80%;
 }
 
-
-
-
 /* DEVOLUCIONES DE GASTOS A COMPRADORES */
-
-.devolucionGastos {
-    background-color: var(---DevolucionGasto);
-}
-
 
 /* Footer */
 
-
 footer {
     background-color: var(---Fotter);
-    display: flex;
     height: 8rem;
     text-align: center;
+    padding: 1rem;
 }
 
 footer p {
@@ -295,11 +317,80 @@ footer p {
 }
 
 
-/* MODO OSCURO */
+/* Media Queries */
 
-.darkmode header {
-    background-color: var(---DarkModeFondo);
-}
+ @media (max-width: 1000px) {
+ 
+    .quien,
+    .que,
+    .cuanto,
+    .agregar,
+    .estadoGastosParciales,
+    .gastosTotalesComprador,    .estadoGastosParciales,
+    .gastosTotalesComprador,.cantidadPersonas,
+    .totalGastadoJuntada,
+    .devolucionesCompradores  {
+        width: 50%;
+    }
+
+
+
+    
+
+    .iconoGrande {
+        font-size: 30px;
+        color: var(---Presentacion);
+        height: 40px;
+        padding-right: 1rem;
+    }
+
+
+    
+} 
+
+@media (max-width: 500px) {
+
+    .quien,
+    .que,
+    .cuanto,
+    .agregar,
+    .estadoGastosParciales,
+    .gastosTotalesComprador,    .estadoGastosParciales,
+    .gastosTotalesComprador,.cantidadPersonas,
+    .totalGastadoJuntada,
+    .devolucionesCompradores  {
+        width: 100%;
+    }
+
+    
+
+    .encabezados {
+        background-color: var(---Encabezados);
+        padding: .5rem .5rem .5rem .5rem;
+    }
+
+    .icon_text{
+        margin-top: 1rem;
+    }
+
+    .presentacion{
+        display: flex;
+        flex-direction: column;
+
+        h5{
+            text-align: center;
+            line-height: 2rem ;
+            
+        }
+    }
+        
+
+} 
+
+
+
+
+/* MODO OSCURO */
 
 .darkmode header {
     background-color: var(---DarkModeFondo);
@@ -373,14 +464,14 @@ footer p {
     color: #000;
 }
 
-.darkmode li{
+.darkmode li {
     background-color: rgb(17, 53, 161);
 }
 
 .darkmode b {
-    color:rgb(255, 84, 232);
+    color: rgb(255, 84, 232);
 }
 
-.darkmode .iconoGrande{
+.darkmode .iconoGrande {
     color: #8cd9f5;
 }

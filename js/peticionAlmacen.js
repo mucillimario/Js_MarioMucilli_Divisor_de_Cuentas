@@ -4,7 +4,7 @@ fetch("json/almacen.json")
     console.log(data)
 
     for(let listaComprasCargadas of data){
-        let almacenCompras = document.getElementById("hola01")
+        let almacenCompras = document.getElementById("opcionesPredefinidas")
         let opcion = document.createElement("option")
         opcion.innerHTML = `${listaComprasCargadas.titulo}`
         opcion.value = `${listaComprasCargadas.titulo}`
@@ -13,7 +13,7 @@ almacenCompras.appendChild(opcion)
 
 })
 
-const optionselect = document.getElementById(`hola01`)
+const optionselect = document.getElementById(`opcionesPredefinidas`)
 
 optionselect.addEventListener("change", function(){
     const opcionSelccionada = optionselect.value
