@@ -11,10 +11,10 @@ botonModoOscuro.addEventListener("click", e => {
     store(body.classList.contains(`darkmode`))
 
     // If que cambia el texto de botón
-    if (botonModoOscuro.innerText == `Modo Oscuro`)
-        botonModoOscuro.innerText = `Modo Oscuro Activado`;
+    if (botonModoOscuro.innerText == `Activar modo oscuro`)
+        botonModoOscuro.innerText = `Desactivar modo oscuro`;
     else {
-        botonModoOscuro.innerText = `Modo Oscuro`;
+        botonModoOscuro.innerText = `Activar modo oscuro`;
     }
 
 });

@@ -1,12 +1,18 @@
 :root {
-    ---Body: #f1f1f1;
-    ---Header: color: rgba(86, 151, 140, 1);
+
+    ---Header: #fff;
     ---Presentacion: #025839;
     ---Encabezados: #9E570C;
-    ---IngresoGastos: #e3d6aa;
-    ---GastosParcialesYTotales: #e3d6aa;
+    ---Body: #e3d6aa;
+
+
+    ---GastosParcialesYTotales: #74601c;
+    ---DevolucionGasto: #a6861c;
+
+
+  
     ---ListaHorizontal: #324134;
-    ---DevolucionGasto: #e3d6aa;
+
     ---Fotter: #454545;
     ---DarkModeFondo: #000;
     ---BtnReposo: #717171;
@@ -93,25 +99,26 @@ header {
     background-color: var(---Presentacion);
     box-shadow: 0px 2px 2px var(---Sombra);
     z-index: 1;
-
-
+    display:flex;
+    justify-content: space-evenly;
+padding:1rem;
 }
 
 .presentacion h5 {
     color: #fff;
     display:flex;
     justify-content: center;
-    padding-top: 10px;
+    padding-top: 1rem;
 }
 
-
+.BotonNoche button{
+    min-width: 150px;
+}
 /* ENCABEZADOS */
 
 .encabezados {
     background-color: var(---Encabezados);
-    padding-top: 5px;
-    height: 40px;
-    display: flex;
+    padding: .5rem 0rem .5rem 4rem;
 }
 
 #btnAgregrarGasto {
@@ -123,13 +130,19 @@ header {
 }
 
 /* INPUTS DE GASTOS  */
-.flexo {
+.inputsDatos{
+    display: flex;
+    justify-content: space-around;
+}
+
+.flexInputs {
     display: flex;
     flex-direction: column;
     align-items: center;
     row-gap: 10px;
     margin: 0px;
 }
+
 
 .iconoGrande {
     font-size: 50px;
@@ -145,10 +158,6 @@ form {
     flex-wrap: wrap;
 }
 
-.inputs {
-    background-color: var(---IngresoGastos);
-    
-}
 
 
 

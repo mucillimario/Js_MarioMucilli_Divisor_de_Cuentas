@@ -19,62 +19,66 @@
     <!-- Css -->
     <link rel="stylesheet" href="css/styles.css">
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1DZGHRQR0K"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-1DZGHRQR0K');
+    </script>
+
+
     <title>Mario Mucilli - Js #48575 - Divisor de gastos</title>
 </head>
 
 
 <body id="IdBody">
 
-    <main class="container-fluid">
+    <main>
         <!-- Header -->
-        <header class="row">
-            <div class="col-md ">
-            </div>
+        <header class="header">
         </header>
 
         <!-- Presentación y botón -->
         <div class="presentacion">
-            <div class="nota">
-                <h5>- VERSION MOBILE NO PREPARADA, YA QUE EL CURSO NO LO SOLICITABA -
-                    <br>
-                    Este es mi entrega final del curso de Java Script, es divisor de gastos para juntada con amigos y
-                    amigas. Busqué lograr
-                    algo rápido e intuitivo para que la elijas antes que tomar lapíz y papel.
+            <div>
+                <h5>
+                    Entrega final del curso de Java Script, es divisor de gastos para juntada con amigos y
+                    amigas. Busqué lograr algo rápido e intuitivo para que la elijas antes que tomar lapíz y papel.
                 </h5>
             </div>
 
 
-            <!-- <div class="col-md-1 col-1 classBotonNoche">
-                <button id="IdBotonModoOscuro" class="botonEstilo"></i> Modo Oscuro</i></button>
-            </div> -->
+            <div class="BotonNoche">
+                <button id="IdBotonModoOscuro" class="botonEstilo"></i></i></button>
+            </div>
 
 
         </div>
 
 
-        <!-- Ingreso de gastos por comprador -->
-        <div class="row ingresoGastos inputs">
-            <div class="col-md-12 encabezados ">
-
+        <!-- PAS0 01 Ingreso de gastos por comprador -->
+        <div class="Paso01">
+            <div class="encabezados ">
                 <h2><i class="fa-solid fa-arrow-right "></i> <u>Paso 01:</u> Ingreso de gastos</h2>
             </div>
-            <form action="">
-                <div class="col-md-3 col-sm-6 flexo">
+            <form class="inputsDatos" action="">
 
-                    <!-- Quien -->
+                <!-- Quien -->
+                <div class="Quien flexInputs">
                     <i class="fa-regular fa-user iconoGrande"></i>
                     <label for="idQuienGasto">
                         <h5>Quien gastó?</h5>
                     </label>
-                    <input class="" type="text" id="idQuienGasto" size="20"
-                        placeholder="Ingresá nombre o apodo de la persona">
+                    <input class="" type="text" id="idQuienGasto" size="20" placeholder="Ingrese el nombre">
                     <div class="textodeapoyo">
                         <p>*Campo requerido *Campo alfanumérico</p>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6 flexo">
 
-                    <!-- Que -->
+                <!-- Que -->
+                <div class="Que flexInputs">
                     <i class="fa-solid fa-clipboard-question iconoGrande"></i>
                     <label for="idQueGasto">
                         <h5>En que gastó?</h5>
