@@ -207,6 +207,16 @@ form input[type="text"]:focus {
     width: 80%;
 }
 
+.optionEstilo{
+    height: 35px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color:#000;
+    }
+
 
 #btnAgregrarGasto {
     margin-bottom:2rem;

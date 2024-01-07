@@ -210,6 +210,7 @@ BtnCantidadDePersonas.addEventListener("click", function () {
     pGastoTotal.innerHTML = (
         `<h6>» El total de las compras fueron<b> ${formatoMoneda(gastoTotal)}</b>.
     <br>» Ingresaste que las compras se dividen en <b>${cantidadDePersonas}</b> integrantes.
+    <br>» Cada integrante debe poner <b>$${gastoPromedioPersona.toFixed(2)}</b> en la mesa.</h6>
     <br>» Se deben devolver <b>$${gastoPromedioPersona.toFixed(2)}</b> por persona.</h6>
         `)
 
