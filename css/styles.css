@@ -1,5 +1,5 @@
 :root {
-    ---Body: #cf1e1e;
+    ---Body: #f1f1f1;
     ---Header: color: rgba(86, 151, 140, 1);
     ---Presentacion: #025839;
     ---Encabezados: #9E570C;
@@ -142,6 +142,7 @@ header {
 
 form {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .inputs {
