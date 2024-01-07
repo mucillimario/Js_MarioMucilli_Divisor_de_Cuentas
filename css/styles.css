@@ -127,7 +127,7 @@ header {
 /* INPUTS DE GASTOS  */
 
 .icon_text{
-    margin: 1rem;
+    margin-top: 2rem;
     display: flex;
     align-items: center;
     width: 80%;
@@ -341,8 +341,9 @@ footer p {
     .totalGastadoJuntada,
     .devolucionesCompradores  {
         width: 50%;
+        border-left: dashed var(---Separadoras) 2px;
+        border-bottom: dashed var(---Separadoras) 2px;
     }
-
 
 
     
@@ -380,6 +381,10 @@ footer p {
     }
 
     .icon_text{
+        margin-left: 0px;
+        margin-right: 0px;
+        border-bottom-width: 0px;
+        margin-bottom: 0px;
         margin-top: 1rem;
     }
 
