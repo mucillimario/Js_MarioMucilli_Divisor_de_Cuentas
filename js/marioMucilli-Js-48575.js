@@ -42,23 +42,13 @@ BtnAgregarGasto.addEventListener("click", function () {
     let queGasto = InputEnQueGasto.value
     let cuantoGasto = parseInt(InputCuantoGasto.value)
 
-    if (!quienCompra) {
-        alert(`Ups, te olvidaste cargar el campo de "Quién gastó", 
-        Recordá que es necesario que los 3 campos estén completos :)
-        » Quien gastó y en que gastó se deben ingresar Letras y/o números
-        » Cuanto gastó solo se puede ingresar números`)
-    }
-    if (!queGasto) {
-        alert(`Ups, te olvidaste cargar el campo de "Quién gastó", 
-        Recordá que es necesario que los 3 campos estén completos :)
-        » Quien gastó y en que gastó se deben ingresar Letras y/o números
-        » Cuanto gastó solo se puede ingresar números`)
-    }
-    if (!cuantoGasto) {
-        alert(`Ups, te olvidaste cargar el campo de "Quién gastó", 
-        Recordá que es necesario que los 3 campos estén completos :)
-        » Quien gastó y en que gastó se deben ingresar Letras y/o números
-        » Cuanto gastó solo se puede ingresar números`)
+
+    if (!quienCompra || !queGasto || isNaN(cuantoGasto) || cuantoGasto < 0) {
+        alert(`Ups, algún campo está incompleto o el monto ingresado es negativo.
+        » Quien gastó -> ingresar letras.
+        » En que gastó -> ingresar letras.
+        » Cuanto gastó -> solo se puede ingresar números positivos.`)
+        return; 
     }
 
     if (quienCompra && queGasto && cuantoGasto) {
