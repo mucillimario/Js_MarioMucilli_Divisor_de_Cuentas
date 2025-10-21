@@ -10,7 +10,7 @@
     ---BtnHover: #e3d6aa;
     ---BtnPresionado: #121212;
     ---Sombra: #033121;
-    ---DarkModeFondo: #151515;
+    ---DarkModeBody: #232323;
 }
 
 
@@ -126,7 +126,7 @@ header {
 
 /* INPUTS DE GASTOS  */
 
-.icon_text{
+.icon_text {
     margin-top: 2rem;
     display: flex;
     align-items: center;
@@ -207,20 +207,21 @@ form input[type="text"]:focus {
     width: 80%;
 }
 
-.optionEstilo{
+.optionEstilo {
     height: 35px;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: white;
-    color:#000;
-    }
+    color: #000;
+}
 
 
 #btnAgregrarGasto {
-    margin-bottom:2rem;
+    margin-bottom: 2rem;
 }
+
 /* PASO 02 */
 /* GASTOS PARCIALES Y TOTALES DE COMPRADORES */
 
@@ -239,10 +240,6 @@ form input[type="text"]:focus {
 
 b {
     color: brown;
-}
-
-li {
-    background-color: var(---Body);
 }
 
 .dosBotones {
@@ -306,7 +303,7 @@ li {
 
 footer {
     background-color: var(---Fotter);
-    height: 8rem;
+
     text-align: center;
     padding: 1rem;
 }
@@ -329,24 +326,26 @@ footer p {
 
 /* Media Queries */
 
- @media (max-width: 1000px) {
- 
-    .quien,
-    .que,
-    .cuanto,
-    .agregar,
-    .estadoGastosParciales,
-    .gastosTotalesComprador,    .estadoGastosParciales,
-    .gastosTotalesComprador,.cantidadPersonas,
-    .totalGastadoJuntada,
-    .devolucionesCompradores  {
+@media (max-width: 1000px) {
+
+    .quien
+    .que
+    .cuanto
+    .agregar
+    .estadoGastosParciales
+    .gastosTotalesComprador
+    .estadoGastosParciales
+    .gastosTotalesComprador
+    .cantidadPersonas
+    .totalGastadoJuntada
+    .devolucionesCompradores {
         width: 50%;
         border-left: dashed var(---Separadoras) 2px;
         border-bottom: dashed var(---Separadoras) 2px;
     }
 
 
-    
+
 
     .iconoGrande {
         font-size: 30px;
@@ -356,31 +355,33 @@ footer p {
     }
 
 
-    
-} 
+
+}
 
 @media (max-width: 500px) {
 
-    .quien,
-    .que,
-    .cuanto,
-    .agregar,
-    .estadoGastosParciales,
-    .gastosTotalesComprador,    .estadoGastosParciales,
-    .gastosTotalesComprador,.cantidadPersonas,
-    .totalGastadoJuntada,
-    .devolucionesCompradores  {
+    .quien
+    .que
+    .cuanto
+    .agregar
+    .estadoGastosParciales
+    .gastosTotalesComprador
+    .estadoGastosParciales
+    .gastosTotalesComprador
+    .cantidadPersonas
+    .totalGastadoJuntada
+    .devolucionesCompradores {
         width: 100%;
     }
 
-    
+
 
     .encabezados {
         background-color: var(---Encabezados);
         padding: .5rem .5rem .5rem .5rem;
     }
 
-    .icon_text{
+    .icon_text {
         margin-left: 0px;
         margin-right: 0px;
         border-bottom-width: 0px;
@@ -388,59 +389,42 @@ footer p {
         margin-top: 1rem;
     }
 
-    .presentacion{
+    .presentacion {
         display: flex;
         flex-direction: column;
 
-        h5{
+        h5 {
             text-align: center;
-            line-height: 2rem ;
-            
+            line-height: 2rem;
+
         }
     }
-        
 
-} 
+
+}
 
 
 
 
 /* MODO OSCURO */
+.darkmode, .body {
+    background-color: var(---DarkModeBody);
+}
+
 
 .darkmode header {
     background-color: var(---DarkModeFondo);
 }
 
+
 .darkmode .encabezados {
-    background-color: var(---DarkModeFondo);
+    background-color: rgb(14, 6, 6);
 }
 
-.darkmode .estadoGastosParciales {
-    background-color: var(---DarkModeFondo);
-}
 
-.darkmode .columnaTotales {
-    background-color: var(---DarkModeFondo);
-}
-
-.darkmode .gastosTotalesJuntada {
-    background-color: var(---DarkModeFondo);
-}
-
-.darkmode .cantidadPersonas {
-    background-color: var(---DarkModeFondo);
-}
-
-.darkmode .gastosTotalesComprador {
-    background-color: var(---DarkModeFondo);
-}
-
-.darkmode .estadoGastosParciales {
-    background-color: var(---DarkModeFondo);
-}
 
 .darkmode footer {
-    background-color: #a7a7a7;
+    background-color: #3f1e1e;
 }
 
 .darkmode .inputs {
@@ -476,17 +460,15 @@ footer p {
 }
 
 .darkmode p {
-    color: #000;
+    color: #d4d4d4;
 }
 
-.darkmode li {
-    background-color: rgb(17, 53, 161);
-}
+
 
 .darkmode b {
     color: rgb(255, 84, 232);
 }
 
 .darkmode .iconoGrande {
-    color: #8cd9f5;
+    color: #efefef;
 }
